@@ -1,5 +1,5 @@
 **Developing a Personalized Clinical Support System Utilizing Classification Models for Drug
-Assessment **
+Assessment**
 
 Project description: The study incorporates deep learning with TF-IDF in
 the NLP modelling to determine whether patients' attitudes
@@ -15,4 +15,3 @@ in capturing intricate sentiment patterns, highlighting its
 potential for enhancing clinical decision systems in
 healthcare. 
 
-For further description use Project Paper PDF file. 
