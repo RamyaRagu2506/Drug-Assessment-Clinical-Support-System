@@ -2,7 +2,7 @@
 
 ## Overview:
 A clinical decision support system that tailors therapy recommendations based on aspect-based sentiment analysis of patient drug reviews. 
-The system initially classifies patient attitudes toward medications — positive, negative, or neutral and uses them to generating drug recommendations providing an overview on individual's medical conditions and their suggested drug side effects supporting pharmacovigilance and patient-centred clinical decision-making.
+The system initially classifies patient attitudes toward medications - positive, negative, or neutral and uses them to generate drug recommendations providing an overview on individual's medical conditions and their suggested drug side effects supporting pharmacovigilance and patient-centred clinical decision-making.
 
 ## Dataset
 
