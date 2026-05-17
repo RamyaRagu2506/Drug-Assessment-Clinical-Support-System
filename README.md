@@ -1,17 +1,42 @@
-**Developing a Personalized Clinical Support System Utilizing Classification Models for Drug
-Assessment**
+## Developing a Personalized Clinical Support System Utilizing Classification Models for Drug Assessment
 
-Project description: The study incorporates deep learning with TF-IDF in
-the NLP modelling to determine whether patients' attitudes
-toward medicines are positive, negative, or neutral. Then a
-recommendation system is delivered highlighting the
-remarkable drugs based on the medical condition of the
-individuals. Additionally, the paper compares the performance
-of ensemble methods, deep learning algorithms like LSTM
-with TF-IDF to traditional machine learning methods like
-Linear - SVC and logistic regression. The results demonstrate
-the superior accuracy of 0.97 by the deep learning approach
-in capturing intricate sentiment patterns, highlighting its
-potential for enhancing clinical decision systems in
-healthcare. 
+## Overview:
+A clinical decision support system that tailors therapy recommendations based on aspect-based sentiment analysis of patient drug reviews. 
+The system initially classifies patient attitudes toward medications — positive, negative, or neutral and uses them to generating drug recommendations providing an overview on individual's medical conditions and their suggested drug side effects supporting pharmacovigilance and patient-centred clinical decision-making.
+
+## Dataset
+
+UCI Drug Review Dataset — patient reviews paired with medical conditions and drug ratings.
+
+## Methodology 
+Two sentiment labelling strategies were compared across multiple classification models: **Labelling Approaches:** 
+- **TextBlob** - polarity scores ranging from -1 to 1, subjectivity from 0.0 to 1.0 
+- **Vader** - polarity-based: positive (≥ 0.05), negative (≤ -0.05), neutral (between)
+
+**Models Compared:**
+
+| Model | TextBlob Accuracy | Vader Accuracy |
+|-------|-------------------|----------------|
+| Linear SVC | Best performer (traditional) | Ranks above ensemble by 1% |
+| Logistic Regression | Baseline | Baseline |
+| Ensemble (LR + SVC) | Competitive | 0.93 |
+| LSTM + TF-IDF | **0.97** | **0.96** |
+
+## Key Results 
+
+- LSTM-based modelling outperforms all traditional and ensemble classifiers under both labelling strategies.
+- TextBlob labelling yields higher accuracy than Vader in traditional ML settings; LSTM narrows this gap significantly 
+- Deep learning captures intricate sentiment patterns in medical language that surface-level lexicon methods miss - **Best accuracy: 0.97 (LSTM + TF-IDF, TextBlob labelling)**
+
+## Limitations & Future Work
+- Deep learning models requires higher computation necessitating optimisation
+- Identifying condition-specific information in reviews could further improve efficiency
+- Promising extension: fine-tuning BERT or other LLMs for richer hidden pattern extraction
+- Alternative embeddings (Word2Vec) worth exploring for comparative analysis
+
+## Tech Stack
+Python · LSTM · TF-IDF · TextBlob · Vader · Scikit-learn · TensorFlow · NLP Libraries
+
+## Conference
+Presented at **NCTS'23** — National Conference on Technology for the Society, October 2023, SRMIST, Chennai, India.
 
